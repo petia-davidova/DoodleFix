@@ -33,7 +33,7 @@ img = thresh1
 
 denoised = cv2.GaussianBlur(thresh1,(5,5),0)
 filtered = cv2.Laplacian(denoised,cv2.CV_64F)
-
+cv2.imwrite('edged.jpg', filtered)
 ###################################################
 
 # img = np.zeros((512,512,3), np.uint8)
@@ -46,8 +46,8 @@ img2=ref_img
 cv2.namedWindow('ref_image')
 cv2.setMouseCallback('ref_image',select_point)
 
-# vis = np.concatenate((img2, img), axis=1)
-# cv2.imshow('vis',vis)
+vis = np.concatenate((img2, img), axis=1)
+cv2.imwrite('vis.jpg',vis)
 while(1):
     cv2.imshow('image', img)
     cv2.imshow('ref_image',ref_img)

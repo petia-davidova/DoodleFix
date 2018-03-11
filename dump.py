@@ -1,5 +1,3 @@
-
-
 def select_image():
 	# grab a reference to the image panels
 	global panelA, panelB
