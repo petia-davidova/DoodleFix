@@ -19,7 +19,6 @@ img = thresh1
 rows,cols = img.shape # number of rows/cols of image
 
 denoised = cv2.GaussianBlur(thresh1,(5,5),0)
-cv2.imshow('denoised', denoised)
 filter = cv2.Laplacian(denoised,cv2.CV_64F)
 
 # cv2.imshow('Original',raw_img)
